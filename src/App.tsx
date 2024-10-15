@@ -1,23 +1,22 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 import style from './App.module.scss';
-import { useGetPokemonByNameQuery } from './store/sercives/pocemon';
 
-function App(): ReactElement {
-   const { data, error, isLoading } = useGetPokemonByNameQuery('bulbasaur');
+import Filter from './component/Filter';
+import UserList from './component/UserList';
+
+const App: React.FC = () => {
    return (
       <div className={style.app}>
-         {error ? (
-            <>Oh no, there was an error</>
-         ) : isLoading ? (
-            <>Loading...</>
-         ) : data ? (
-            <>
-               <h3>{data.species.name}</h3>
-               <img src={data.sprites.front_shiny} alt={data.species.name} />
-            </>
-         ) : null}
+         <div className={style.mainContainer}>
+            <section className={style.section}>
+               <Filter />
+            </section>
+            <section className={style.section}>
+               <UserList />
+            </section>
+         </div>
       </div>
    );
-}
+};
 
 export default App;
