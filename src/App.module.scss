@@ -13,12 +13,8 @@
  min-width: 100%;
   @extend %display-center;
 }
-// .filterSection{ 
-//  height: 300px;
-// }
 .section{ 
-  min-width: 50%;
- overflow:scroll;
+ min-width: 100%;
  outline: 1px solid rgba(196, 196, 196, 1);
  background-color: rgba(255, 255, 255, 1);
   &::-webkit-scrollbar { width: 0 !important }

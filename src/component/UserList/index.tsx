@@ -30,10 +30,22 @@ const UserList: React.FC = (props) => {
                filterList.map((e: UserI) => {
                   return (
                      <li className={style.liContainer} key={e.id}>
-                        <p>Name: {e.name}</p>
-                        <p>Username: {e.username}</p>
-                        <p>Email: {e.email}</p>
-                        <p>Phone: {e.phone}</p>
+                        <div className={style.containerInfo}>
+                           <p>Name:</p>
+                           <p> {e.name}</p>
+                        </div>
+                        <div className={style.containerInfo}>
+                           <p>Username: </p>
+                           <p>{e.username}</p>
+                        </div>
+                        <div className={style.containerInfo}>
+                           <p>Email:</p>
+                           <p> {e.email}</p>
+                        </div>
+                        <div className={style.containerInfo}>
+                           <p>Phone:</p>
+                           <p> {e.phone}</p>
+                        </div>
                      </li>
                   );
                })
