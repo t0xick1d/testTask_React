@@ -8,7 +8,7 @@ const initialState: FilteSelectType = {
 };
 
 const userSlice = createSlice({
-   name: 'user',
+   name: 'User',
    initialState,
    reducers: {
       setInputFilterUser: (state, action: PayloadAction<string>) => {
