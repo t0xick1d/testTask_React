@@ -8,7 +8,7 @@ const App: React.FC = () => {
    return (
       <div className={style.app}>
          <div className={style.mainContainer}>
-            <section className={style.section}>
+            <section className={style.section +  ' ' + style.filterSection}>
                <Filter />
             </section>
             <section className={style.section}>
